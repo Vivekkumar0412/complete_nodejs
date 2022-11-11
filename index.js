@@ -24,3 +24,8 @@ console.log(fs.readFileSync("text.txt","utf-8"))
 
 fs.writeFileSync("text.txt"," Hi there iam vivek kumar")
 console.log(fs.readFileSync("text.txt","utf-8"))
+
+// to add another text in already existed file we use appendFileSync() method
+
+fs.appendFileSync("text.txt"," I am learning node js so that i can grab a job.")
+console.log(fs.readFileSync("text.txt","utf-8"))
