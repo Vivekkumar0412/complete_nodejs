@@ -19,3 +19,8 @@ console.log(fs.readFileSync("text.txt").toString());
 // 2:- use decoder 
 
 console.log(fs.readFileSync("text.txt","utf-8"))
+
+// if we use writeFile sync again then it will erase the privious data and overwrit the new data
+
+fs.writeFileSync("text.txt"," Hi there iam vivek kumar")
+console.log(fs.readFileSync("text.txt","utf-8"))
