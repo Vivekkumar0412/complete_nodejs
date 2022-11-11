@@ -12,4 +12,10 @@ fs.readFileSync("text.txt")
 
 // to convert the buffer data to normal code we have two methods.
 
+// 1:- to use toString() method
+
 console.log(fs.readFileSync("text.txt").toString());
+
+// 2:- use decoder 
+
+console.log(fs.readFileSync("text.txt","utf-8"))
