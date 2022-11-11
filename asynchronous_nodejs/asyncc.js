@@ -27,3 +27,7 @@ fs.readFile("text.txt",(err,res)=>{
 fs.readFile("text.txt","utf-8",(err,res)=>{
     console.log(res)
 })
+
+fs.readFile("text.txt",(err,res)=>{
+    console.log(res.toString());
+})
