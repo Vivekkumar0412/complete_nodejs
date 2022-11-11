@@ -15,3 +15,5 @@ console.log(os.totalmem()/1024/1024/1034);
 console.log(os.freemem()/1024/1024/1024);
 
 // free memory of ram out of total memory
+
+console.log(os.tmpdir())
