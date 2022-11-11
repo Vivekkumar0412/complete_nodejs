@@ -17,3 +17,7 @@ console.log(os.freemem()/1024/1024/1024);
 // free memory of ram out of total memory
 
 console.log(os.tmpdir())
+// tells the whole path fo rtemp files
+
+console.log(os.platform())
+// tells teh platform
