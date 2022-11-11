@@ -11,3 +11,9 @@ fs.writeFile("text.txt","Hi iam vivek kumar",(err)=>{
     console.log("overwriten")
     console.log(err)
 })
+
+// write file in asynchronous node js
+fs.readFile("text.txt",(err,res)=>{
+    console.log(res)
+    console.log(err)
+})
