@@ -24,10 +24,16 @@ fs.readFile("text.txt",(err,res)=>{
 // 1:- to use .toString() METHODS
 // 2: - to use decoder 
 
-fs.readFile("text.txt","utf-8",(err,res)=>{
-    console.log(res)
-})
+// fs.readFile("text.txt","utf-8",(err,res)=>{
+//     console.log(res)
+// })
 
 fs.readFile("text.txt",(err,res)=>{
     console.log(res.toString());
+})
+
+// we can also add some text to already exusted file
+
+fs.appendFile("text.txt"," Iam learning nodejs so that i can get a job",(err)=>{
+    console.log("file updated")
 })
