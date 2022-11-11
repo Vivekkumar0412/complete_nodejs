@@ -21,3 +21,6 @@ console.log(os.tmpdir())
 
 console.log(os.platform())
 // tells teh platform
+
+console.log(os.type())
+// tells which operating sysytem we are using
