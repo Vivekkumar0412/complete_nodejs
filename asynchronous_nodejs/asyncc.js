@@ -1,4 +1,5 @@
 let fs = require("fs");
+const { METHODS } = require("http");
 
 fs.writeFile("text.txt","I am an asynchronous file",(err)=>{
     console.log("file created !!")
@@ -16,4 +17,13 @@ fs.writeFile("text.txt","Hi iam vivek kumar",(err)=>{
 fs.readFile("text.txt",(err,res)=>{
     console.log(res)
     console.log(err)
+})
+
+// here also we get buffer data we still have to ways
+
+// 1:- to use .toString() METHODS
+// 2: - to use decoder 
+
+fs.readFile("text.txt","utf-8",(err,res)=>{
+    console.log(res)
 })
