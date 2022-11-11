@@ -31,4 +31,5 @@ fs.appendFileSync("text.txt"," I am learning node js so that i can grab a job.")
 console.log(fs.readFileSync("text.txt","utf-8"))
 
 // fs.mkdirSync("asynchronous_nodejs")
-fs.mkdirSync("os_module")
+// fs.mkdirSync("os_module")
+fs.mkdirSync("path_module")
