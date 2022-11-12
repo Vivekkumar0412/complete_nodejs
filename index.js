@@ -33,4 +33,5 @@ console.log(fs.readFileSync("text.txt","utf-8"))
 // fs.mkdirSync("asynchronous_nodejs")
 // fs.mkdirSync("os_module")
 // fs.mkdirSync("path_module")
-// fs.mkdirSync("own_module");dex.js
+// fs.mkdirSync("own_module");
+// fs.mkdirSync("npm_mod");

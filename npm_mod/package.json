@@ -1,0 +1,15 @@
+{
+  "name": "npm_mod",
+  "version": "1.0.0",
+  "description": "learning npm",
+  "main": "npmm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Singh Rajput",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "validator": "^13.1.1"
+  }
+}
