@@ -2,4 +2,8 @@ let a = (b,c)=>{
     return b + c
 };
 
-module.exports = a;
+let c = (a,b)=>{
+    return a - b;
+}
+module.exports.a = a;
+module.exports.c = c;
