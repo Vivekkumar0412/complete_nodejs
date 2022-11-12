@@ -1,1 +1,5 @@
-console.log("exports from her")
+let a = (b,c)=>{
+    return b + c
+};
+
+module.exports = a;
