@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hkhkh</h1>
+    <textarea name="" id="textt" cols="30" rows="10"></textarea>
+    <div id="d"></div>
+    <button id="btn">click</button>
+
+
+
+    <script>
+        let txt = document.getElementById("textt");
+        let d = document.getElementById("d");
+        let btn = document.getElementById("btn");
+
+        // let edit = document.getElementById("edit");
+        // let del = document.getElementById("del");
+
+        // edit.addEventListener("click",()=> alert("hi"))
+        let del = (e)=>{
+            e.parentElement.parentElement.remove();
+        }
+
+        let editt = (e)=>{
+            txt.value = e.parentElement.parentElement.parentElement.innerText;
+            
+        }
+
+        
+
+        let call = () => {
+            d.innerHTML += `<p>${txt.value} <span><button id="edit" onClick = "editt(this)">EDIT</button></span>
+    <span><button id="del" onClick = "del(this)">DELETE</button></span></p>`;
+            txt.value = "";
+        }
+
+        btn.addEventListener('click', call);
+
+    </script>
+</body>
+
+</html>
