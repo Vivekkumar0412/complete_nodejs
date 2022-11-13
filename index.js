@@ -35,3 +35,4 @@ console.log(fs.readFileSync("text.txt","utf-8"))
 // fs.mkdirSync("path_module")
 // fs.mkdirSync("own_module");
 // fs.mkdirSync("npm_mod");
+// fs.mkdirSync("module_wrapper");
