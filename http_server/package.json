@@ -1,0 +1,15 @@
+{
+  "name": "http_server",
+  "version": "1.0.0",
+  "description": "adding es 6 to npm",
+  "main": "http_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Singh Rajput",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
