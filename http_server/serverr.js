@@ -6,7 +6,19 @@ import fs from "fs";
 
 let server = http.createServer((req,res)=>{
     res.setHeader("content-Type","Text/Plain")
-    res.end("hi this file is created by vivek kumar to check !!");
+    // console.log(req.url);
+    if(req.url == "/"){
+        res.end("hi there this is home page");
+    }else if(req.url == "/about"){
+        res.end("this is about page")
+    }else if(req.url == "/about/hi"){
+        res.end("double check")
+    }else{
+        res.writeHead(404,{"content-type":"text/html"})
+        res.end(" <h1> Page not found !</h1>")
+    }
+    
+
 })
 
 let port = process.env.PORT || 8000;
