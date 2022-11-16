@@ -15,7 +15,7 @@ let jsonobj = JSON.stringify(obj);
 // console.log(obj.f());
 // console.log(obj)
 console.log(jsonobj);
-// console.log(JSON.parse(jsonobj))
+console.log(JSON.parse(jsonobj))
 
 let fs = require("fs");
 const { json } = require("stream/consumers");
