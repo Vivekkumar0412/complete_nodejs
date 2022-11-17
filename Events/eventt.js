@@ -14,12 +14,16 @@ myEvent.emit("myName",9,9);
 
 myEvent.on("dt",function(name,age,salary){
     console.log(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`)
-    console.log(this)
+
+    // console.log(this)
 })
 
-myEvent.on("dt",function(name,age,salary){
-    console.log(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`)
-    console.log(this)
-})
+// myEvent.on("dt",function(name,age,salary){
+//     console.log(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`)
+//     // console.log(this)
+// })
 
+myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
+myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
+myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
 myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
