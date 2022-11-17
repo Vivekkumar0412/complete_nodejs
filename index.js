@@ -37,4 +37,6 @@ console.log(fs.readFileSync("text.txt","utf-8"))
 // fs.mkdirSync("npm_mod");
 // fs.mkdirSync("module_wrapper");
 // fs.mkdirSync("http_server")
-fs.mkdirSync("json")
+// fs.mkdirSync("json");
+// fs.mkdirSync("onw_api");
+fs.mkdirSync("Events");
