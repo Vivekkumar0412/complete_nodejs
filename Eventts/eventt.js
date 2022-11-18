@@ -8,15 +8,24 @@ let myEvent = new EventEmitter();
 // console.log(myEvent);
 
 myEvent.on("myName",(a,b)=>{
-    console.log("my name is vivek singh rajput");
+    setImmediate(()=>{
+        console.log("my name is vivek singh rajput");
+    })
     console.log(`the sum is : ${a+b} and product is : ${a*b}`)
 })
 
 myEvent.emit("myName",9,9);
 myEvent.emit("myName");
+let calll = ()=>{
+    console.log("this is function from outside")
+}
 
 myEvent.once("dt",function(name,age,salary){
-    console.log(chalk.bgRedBright(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`))
+    setImmediate(()=>{
+        console.log(chalk.bgRedBright(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`))
+    })
+
+    setImmediate(calll);
 
     console.log(chalk.greenBright("hi"))
 })
