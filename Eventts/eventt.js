@@ -13,6 +13,7 @@ myEvent.on("myName",(a,b)=>{
 })
 
 myEvent.emit("myName",9,9);
+myEvent.emit("myName");
 
 myEvent.once("dt",function(name,age,salary){
     console.log(chalk.bgRedBright(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`))
