@@ -7,41 +7,83 @@
 
 // mle.emit("my");
 
+// let fs = require("fs");
+
+// let data = "";
+
+// let rs = fs.createReadStream("input.txt");
+
+// rs.setEncoding("utf-8");
+
+// rs.on("data",function(res){
+//     data += res;
+// })
+
+// rs.on("end",function(){
+//     console.log(data);
+// })
+
+// rs.on("error",function(err){
+//     console.log(err);
+// })
+
+// console.log("program eddes !")
+
+// let data2 = "Hi there vivek here and i am placed at the pakage of 1.5 cr! at age of 24";
+
+// let ws = fs.createWriteStream("output.txt");
+
+// ws.write(data2,"utf-8")
+// ws.end();
+
+// ws.on("finish",()=>{
+//     console.log("write completed !")
+// })
+
+// ws.on("error",(er)=>{
+//     console.log(er.stack)
+// })
+
+// console.log("programm ended by write file")
+
+
+let http = require("http");
+
+
+
+
 let fs = require("fs");
+let data = "Hi there my name is Vivek kumar i got a pakage of 1.5cr per annum at the age of 24";
 
-let data = "";
+let writeStream = fs.createWriteStream("output.txt");
 
-let rs = fs.createReadStream("input.txt");
+writeStream.write(data,"utf-8");
+writeStream.end();
+writeStream.on("finish",()=>{
+    console.log("fiished uploading the file !");
+});
 
-rs.setEncoding("utf-8");
-
-rs.on("data",function(res){
-    data += res;
+writeStream.on("error",(er)=>{
+    console.log(er.stack);
 })
 
-rs.on("end",function(){
-    console.log(data);
+let dataa = "";
+let readStream = fs.createReadStream("input.txt");
+readStream.setEncoding("utf-8");
+
+readStream.on("data",function(c){
+    dataa += c;
 })
 
-rs.on("error",function(err){
-    console.log(err);
+readStream.on("end",()=>{
+    console.log(dataa)
 })
 
-console.log("program eddes !")
-
-let data2 = "Hi there vivek here and i am placed at the pakage of 1.5 cr!";
-
-let ws = fs.createWriteStream("output.txt");
-
-ws.write(data2,"utf-8")
-ws.end();
-
-ws.on("finish",()=>{
-    console.log("write completed !")
+let server = http.createServer();
+server.on("request",(res,req)=>{
+    fs.readFile("input.txt",(r,ans)=>{
+        req.end(ans);
+    })
 })
 
-ws.on("error",(er)=>{
-    console.log(er.stack)
-})
-
-console.log("programm ended by write file")
+server.listen(3000,"localhost")
