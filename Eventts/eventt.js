@@ -2,6 +2,8 @@ console.log("hi there !!");
 let fs = require("fs");
 let EventEmitter = require("events");
 
+let chalk = require("chalk")
+
 let myEvent = new EventEmitter();
 // console.log(myEvent);
 
@@ -13,13 +15,13 @@ myEvent.on("myName",(a,b)=>{
 myEvent.emit("myName",9,9);
 
 myEvent.once("dt",function(name,age,salary){
-    console.log(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`)
+    console.log(chalk.bgRedBright(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`))
 
-    // console.log(this)
+    console.log(chalk.greenBright("hi"))
 })
 
 myEvent.on("dt",function(name,age,salary){
-    console.log(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`)
+    console.log(chalk.bgYellow(`Hi there I am ${name} my age is ${age} and my current salary is ${salary }`))
     // console.log(this)
 })
 
