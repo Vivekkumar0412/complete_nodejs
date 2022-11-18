@@ -14,6 +14,8 @@ myEvent.on("myName",(a,b)=>{
     console.log(`the sum is : ${a+b} and product is : ${a*b}`)
 })
 
+
+
 myEvent.emit("myName",9,9);
 myEvent.emit("myName");
 let calll = ()=>{
@@ -28,6 +30,9 @@ myEvent.once("dt",function(name,age,salary){
     setImmediate(calll);
 
     console.log(chalk.greenBright("hi"))
+    myEvent.on("error",()=>{
+        console.log("ERROR OCCURED !!")
+    })
 })
 
 myEvent.on("dt",function(name,age,salary){
@@ -39,3 +44,11 @@ myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
 myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
 myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
 myEvent.emit("dt","Vivek",23,"1.5 cr per annum")
+
+myEvent.addListener("gaya",()=>{
+    console.log("this from the emitter.addListener !!")
+})
+
+myEvent.emit("gaya")
+
+console.log(myEvent.eventNames())
