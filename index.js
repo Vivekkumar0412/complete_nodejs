@@ -39,4 +39,5 @@ console.log(fs.readFileSync("text.txt","utf-8"))
 // fs.mkdirSync("http_server")
 // fs.mkdirSync("json");
 // fs.mkdirSync("onw_api");
-fs.mkdirSync("Events");
+// fs.mkdirSync("Events");
+fs.mkdirSync("Stream Module")

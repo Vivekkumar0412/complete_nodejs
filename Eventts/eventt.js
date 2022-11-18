@@ -52,3 +52,4 @@ myEvent.addListener("gaya",()=>{
 myEvent.emit("gaya")
 
 console.log(myEvent.eventNames())
+console.log(myEvent.getMaxListeners())
