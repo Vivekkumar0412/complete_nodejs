@@ -68,22 +68,50 @@ writeStream.on("error",(er)=>{
 })
 
 let dataa = "";
-let readStream = fs.createReadStream("input.txt");
-readStream.setEncoding("utf-8");
 
-readStream.on("data",function(c){
-    dataa += c;
-})
+// let readStream = fs.createReadStream("output.txt");
 
-readStream.on("end",()=>{
-    console.log(dataa)
-})
+// readStream.setEncoding("utf-8");
+
+// readStream.on("data",function(chunk){
+//     dataa += chunk;
+// })
+
+// readStream.on("end",()=>{
+//     console.log("finished streamimg !!!")
+// })
+
+// readStream.on("error",(err)=>{
+//     console.log(err)
+// })
 
 let server = http.createServer();
-server.on("request",(res,req)=>{
-    fs.readFile("input.txt",(r,ans)=>{
-        req.end(ans);
+
+server.on("request",function(req,res){
+    fs.readFile("output.txt","utf-8",(err,data1)=>{
+        res.end(data1);
     })
 })
 
-server.listen(3000,"localhost")
+server.listen(3000,"localhost",()=>{
+    console.log("done")
+})
+// let readStream = fs.createReadStream("input.txt");
+// readStream.setEncoding("utf-8");
+
+// readStream.on("data",function(c){
+//     dataa += c;
+// })
+
+// readStream.on("end",()=>{
+//     console.log(dataa)
+// })
+
+// let server = http.createServer();
+// server.on("request",(res,req)=>{
+//     fs.readFile("input.txt",(r,ans)=>{
+//         req.end(ans);
+//     })
+// })
+
+// server.listen(3000,"localhost")
